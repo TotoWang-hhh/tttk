@@ -1,0 +1,66 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug] "
+labels: ["bug"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提交问题！很抱歉浪费您的时间……
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 开始前请检查
+      description: 请检查以下问题，这有助于我更高效地管理并解决您和他人的反馈。
+      - label: 注：如果您只是为了催我或联系我而新建一个issue，请停止这么做并直接联系我的邮箱：tt1224@hotmail.com
+      options:
+        - label: 您已检查且确定没有其他人提出仍未解决的相关问题
+          required: true
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式
+      description: 我如何联系您来获得更多信息
+      placeholder: 例：email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 问题详情
+      description: 发生甚么事了！？
+      placeholder: 您看到了……
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: 环境和版本
+      description: 您正在使用哪个版本的tttk？
+      options:
+        - 0.1.0
+        - 1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: system
+    attributes:
+      label: 您正在使用什么系统？
+      multiple: true
+      options:
+        - Windows 10/11
+        - Windows 7 SP1 ~ 8.1
+        - Windows 1.0 ~ ME （不支持Python 3）
+        - Windows 2000 ~ 7 （不支持Python 3）
+        - Mac OS （作者没有该环境）
+        - Linux
+        - DOS / 命令行Linux / 其他命令行系统 （不支持Python 3和tkinter）
+        - Android / iOS / 其余大部分移动端 （不支持tkinter）（需在额外信息中说明具体系统和终端）
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关输出
+      description: 请粘贴任何有关的输出至此处，它们会被自动转换为代码格式。
+      render: shell
