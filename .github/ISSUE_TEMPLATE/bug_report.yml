@@ -3,7 +3,7 @@ description: 反馈一个BUG
 title: "[Bug] "
 labels: ["bug"]
 assignees:
-  - octocat
+  - totowang-hhh
 body:
   - type: markdown
     attributes:
