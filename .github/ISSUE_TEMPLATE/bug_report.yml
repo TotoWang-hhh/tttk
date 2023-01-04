@@ -18,6 +18,9 @@ body:
       options:
         - label: 您已检查且确定没有其他人提出仍未解决的相关问题
           required: true
+      options:
+        - label: 您已尝试过更换版本（更新至最新或回退至x.0.0），但似乎并不起效
+          required: true
   - type: input
     id: contact
     attributes:
