@@ -62,7 +62,7 @@ body:
     id: system
     attributes:
       label: 系统和版本
-      description: 您最初在哪个系统遇到该问题？\n如果您认为您需要留下更详细的信息，请在额外信息中说明。
+      description: 您最初在哪个系统遇到该问题？
       multiple: false
       options:
         - Windows 10/11
@@ -80,7 +80,7 @@ body:
     id: system_other
     attributes:
       label: 其他可能出现问题的系统
-      description: 您猜测/知道还有哪些系统会遇到该问题？\n如果您认为您需要留下更详细的信息，请在额外信息中说明。
+      description: 您猜测/知道还有哪些系统会遇到该问题？
       multiple: true
       options:
         - Windows 10/11
@@ -100,7 +100,7 @@ body:
     id: other
     attributes:
       label: 附加内容
-      description: 如果您还想附上其他信息，请打好小标题附在这里。\n您可以在此处附截图。
+      description: 如果您还想附上其他信息，请打好小标题附在这里。您可以在此处附截图。
       placeholder: 附加内容……
     validations:
       required: false
