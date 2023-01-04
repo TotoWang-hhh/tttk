@@ -12,9 +12,9 @@ body:
   - type: checkboxes
     id: terms
     attributes:
-      label: 开始前请检查
+      - label: 开始前请检查
       description: 请检查以下问题，这有助于我更高效地管理并解决您和他人的反馈。
-      - label: 注：如果您只是为了催我或联系我而新建一个issue，请停止这么做并直接联系我的邮箱：tt1224@hotmail.com
+      label: 注：如果您只是为了催我或联系我而新建一个issue，请停止这么做并直接联系我的邮箱：tt1224@hotmail.com
       options:
         - label: 您已检查且确定没有其他人提出仍未解决的相关问题
           required: true
