@@ -1,6 +1,6 @@
 # tttk中文文档
 
-**2022 By 真_人工智障（aka. rgzz666 / totowang-hhh）**
+**2022~2023 By 真_人工智障（aka. rgzz666 / totowang-hhh）**
 
 tttk是一个tkinter的增强库，旨在扩展tkinter可使用的控件。**注意：tttk并不能起到美化作用。**
 
