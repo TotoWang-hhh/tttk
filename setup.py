@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 from setuptools import setup, find_packages
 
-with open("./README.md", "r",encoding='utf-8') as fh:
-    long_description = fh.read()
+try:
+    with open("./README.md", "r",encoding='utf-8') as fh:
+        long_description = fh.read()
+except FileNotFoundError: # 防止安装时文件找不到
+    long_description = "tkinter的增强库"
 
-with open('./requirements.txt','r',encoding='utf-8') as f:
-    requirements = [l for l in f.read().splitlines() if l]
+requirements = []
 
 setup(name="tttk",  # 项目名
-      version="1.0.0",       # 版本号
+      version="1.0.3",       # 版本号
       description="tkinter的增强库",  #简介
       long_description=long_description,  # 长简介 这里使用的 readme 内容
       long_description_content_type="text/markdown",
@@ -18,6 +20,6 @@ setup(name="tttk",  # 项目名
       author_email="tt1224@hotmail.com",  # 邮箱
       url="https://github.com/TotoWang-hhh/tttk/",  # 地址
       download_url="https://github.com/TotoWang-hhh/tttk/archive/master.zip",
-      packages=["tttk"],
+      py_modules=['tttk'],
       keywords=['tttk','tkinter增强','tk增强'],
       zip_safe=True)

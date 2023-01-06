@@ -1,7 +1,7 @@
 import tkinter.messagebox as msgbox
 import tkinter as tk
 import tkinter.ttk as ttk
-from tttk import tttk
+import tttk
 
 import webbrowser
 
