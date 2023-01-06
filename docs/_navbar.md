@@ -6,5 +6,3 @@
   * [从GitHub Release](https://www.github.com/totowang-hhh/tttk/releases/)
 
 * <a download="https://raw.githubusercontent.com/TotoWang-hhh/tttk/main/docs/README.md">离线阅读</a>
-
-* [For English Users](https://totowang-hhh.github.io/tttk/#/?id=for-english-speakers)
