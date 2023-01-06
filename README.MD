@@ -2,6 +2,8 @@
 
 **2022~2023 By 真_人工智障（aka. rgzz666 / totowang-hhh）**
 
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+
 tttk是一个tkinter的增强库，旨在扩展tkinter可使用的控件。**注意：tttk并不能起到美化作用。**
 
 不同于Tin UI、ttkbootstrap等其他tkinter扩展库，本项目全部控件都基于tkinter.Frame等原生控件进行继承和修改（类似于tkwebview2），而不是在tkinter.Canvas上进行绘制，亦或直接修改控件样式。
