@@ -6,22 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//unpkg.com/docsify@4/lib/themes/buble.css">
 </head>
 <body>
-  <nav>
-    <a href="https://www.github.com/totowang-hhh/">我的GitHub</a>
-    <a href="http://rgzz.likesyou.org/">关于作者</a>
-    <a href="https://www.cnblogs.com/totowang">获取更新</a>
-    <a href="https://raw.githubusercontent.com/TotoWang-hhh/tttk/main/docs/README.md">离线阅读</a>
-  </nav>
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: 'tttk帮助文档',
       repo: 'https://www.github.com/totowang-hhh/tttk/', 
+      loadNavbar: true
       search: {paths: 'auto', placeholder: '全文搜索', noData: '似乎什么都没找到', depth: 3}, 
       count:{countable: true, fontsize:'0.9em', color: 'rgb(90,90,90)', language: 'chinese' },
+      hideOtherSidebarContent: true, // 是否隐藏其他侧边栏内容
     }
   </script>
   <!-- Docsify v4 -->
@@ -31,5 +27,10 @@
   <script src="//unpkg.com/docsify-copy-code"></script>
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
 </body>
 </html>
