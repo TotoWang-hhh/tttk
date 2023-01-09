@@ -1,7 +1,7 @@
 name: 新控件
 description: 请求一个新控件
 title: "[Feature Request] "
-labels: ["new things request", "widget request"]
+labels: ["new thing", "widget request"]
 assignees:
   - totowang-hhh
 body:
