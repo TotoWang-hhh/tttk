@@ -1,7 +1,7 @@
 name: 新功能
 description: 请求一个新功能
 title: "[Feature Request] "
-labels: ["new", "feature"]
+labels: ["new things request", "feature request"]
 assignees:
   - totowang-hhh
 body:
@@ -33,7 +33,7 @@ body:
     attributes:
       label: 简要描述
       description: 简要描述您想添加的内容
-      placeholder: 我想要一个……的控件
+      placeholder: 我想要一个……的特性/功能
     validations:
       required: true
   - type: textarea
