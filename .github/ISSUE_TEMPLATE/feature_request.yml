@@ -1,7 +1,7 @@
 name: 新功能
 description: 请求一个新功能
 title: "[Feature Request] "
-labels: ["new things request", "feature request"]
+labels: ["new thing", "feature request"]
 assignees:
   - totowang-hhh
 body:
