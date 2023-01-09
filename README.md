@@ -25,7 +25,7 @@ You can translate this doc with a translate software. **(Do not use Google Trans
 
 ## 不清楚文档是否为最新？
 
-不出意外的话，本文的最新版本将始终在[GitHub存储库](https://github.com/totowang-hhh/tttk/)和[基于GitHub Pages和Docsify的在线文档站](totowang-hhh.github.io/tttk)可用。
+不出意外的话，本文的最新版本将始终在[GitHub存储库](https://github.com/totowang-hhh/tttk/)和[基于GitHub Pages和Docsify的在线文档站](https://totowang-hhh.github.io/tttk)可用。
 
 ## 对应版本：1.0.0~1.0.3
 
