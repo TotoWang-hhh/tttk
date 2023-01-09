@@ -1,0 +1,54 @@
+name: 新功能
+description: 请求一个新功能
+title: "[Feature Request] "
+labels: ["feature request"]
+assignees:
+  - totowang-hhh
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提交问题！很抱歉浪费您的时间……
+        注：如果您只是为了催我或联系我而新建一个issue，请停止这么做并直接联系我的邮箱：tt1224@hotmail.com
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 开始前请检查
+      description: 请检查以下问题，这有助于我更高效地管理并解决您和他人的反馈。
+      options:
+        - label: 您已检查且确定没有其他人提出仍未关闭的相关建议
+          required: true
+        - label: 您已检查且确定作者尚未说过您的建议是暂时无法实现的
+          required: true
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式
+      description: 我如何联系您来获得更多信息
+      placeholder: 例：email@example.com
+    validations:
+      required: false
+  - type: input
+    id: feature
+    attributes:
+      label: 简要描述
+      description: 简要描述您想添加的内容
+      placeholder: 我想要一个……的控件
+    validations:
+      required: true
+  - type: textarea
+    id: describe
+    attributes:
+      label: 详细描述
+      description: 详细描述这个功能的作用
+      placeholder: 这个功能包括……，它可以用来……
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: 附加内容
+      description: 如果您还想附上其他信息，请打好小标题附在这里。您可以在此处附想象图。
+      placeholder: 附加内容……
+    validations:
+      required: false
