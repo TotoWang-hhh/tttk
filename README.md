@@ -2,7 +2,7 @@
 
 **2022 By 真_人工智障（aka. rgzz666 / totowang-hhh）**
 
-[![优先遵循Anti 996开源许可](https://img.shields.io/badge/License-Anti 996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)[![同时遵循MPL-2.0开源许可](https://img.shields.io/badge/License-MPL 2.0-orange)](https://www.mozilla.org/en-US/MPL/2.0/)
+[![优先遵循Anti 996开源许可](https://img.shields.io/badge/License-Anti 996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![同时遵循MPL-2.0开源许可](https://img.shields.io/badge/License-MPL 2.0-orange)](https://www.mozilla.org/en-US/MPL/2.0/)
 
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) 本项目在对抗996工作制的行列中。
 
