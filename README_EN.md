@@ -2,7 +2,8 @@
 
 **2022 By rgzz666（aka. 真_人工智障 / totowang-hhh）**
 
-[![Anti 996](https://img.shields.io/badge/License-Anti 996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)[![MPL-2.0](https://img.shields.io/badge/License-MPL 2.0-orange)](https://www.mozilla.org/en-US/MPL/2.0/)
+[![Anti 996](https://img.shields.io/badge/License-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![MPL-2.0](https://img.shields.io/badge/License-MPL%202.0-orange)](https://www.mozilla.org/en-US/MPL/2.0/)
 
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) This project againsts [996 work schedule](https://github.com/996icu/996.ICU#what-is-996).
 
@@ -26,7 +27,7 @@ You can contact me at tt1224@hotmail.com at anytime to help me with the translat
 
 ## Not Sure if this is the Newest Document?
 
-If there isn't anything unexpected, the latest version this document will always avaliable on [GitHub](https://github.com/totowang-hhh/tttk/) or [the online document site that based on GitHub Pages and Docsify](totowang-hhh.github.io/tttk).
+If there isn't anything unexpected, the latest version this document will always avaliable on [GitHub](https://github.com/totowang-hhh/tttk/) or [the online document site that based on GitHub Pages and Docsify](https://totowang-hhh.github.io/tttk).
 
 ## Suits 1.0.0~1.0.3
 
