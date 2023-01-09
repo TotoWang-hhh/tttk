@@ -23,7 +23,7 @@ You can translate this doc with a translate software. **(Do not use Google Trans
 
 ~~I **can** translate this doc but I'm too lazy. If you want to do it 4 me, please contact me at tt1224@hotmail.com.~~
 
-## 不清楚是否为最新？
+## 不清楚文档是否为最新？
 
 不出意外的话，本文的最新版本将始终在[GitHub存储库](https://github.com/totowang-hhh/tttk/)和[基于GitHub Pages和Docsify的在线文档站](totowang-hhh.github.io/tttk)可用。
 
