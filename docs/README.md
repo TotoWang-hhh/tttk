@@ -14,7 +14,7 @@ U can translate this doc with a translate software. **(Do not use Google Transla
 
 I **can** translate this doc but I'm too lazy. If you want to do it 4 me, please contact me at tt1224@hotmail.com.
 
-## 对应版本：1.0.0~1.0.3
+## 对应版本：1.0.0~1.0.4
 
 ### 更新内容
 
@@ -349,6 +349,49 @@ win.mainloop()
 **例如**，如果您想制作一排按钮来显示一些网址，那么我们可以先实例化一个BtnRow对象，传入`parent`参数，然后再写`content={}`，开始写字典。首先我们来创建一个指向百度（baidu.com），文字为“百度”的按钮，我们需要先写打开百度的函数`webbrowser.open("https://www.baidu.com")`，将其放在lambda语句里，然后在字典内写一个键值对，结果就是如此`{'百度':lambda:webbrowser.open("https://www.baidu.com")}`。接下来，让我们制作一个指向`example()`函数，文字为“示例”的按钮，我们需要先创建一个名为“example”的函数，然后再先前字典的第一个键值对后面添上逗号，加上第二个按钮的信息，如果我们的example函数并不需要传入任何参数，那么“lambda”和函数名后的括号就都可以被辞退了，故结果应如此`{'百度':lambda:webbrowser.open("https://www.baidu.com"),'示例':example}`。
 
 如果您仍无法理解，可以运行本项目的Demo，并查看其代码。两个Demo的界面底部都包含一个BtnRow，这绝对是一个易懂的例子。
+
+### Menu
+
+用于创建一个包含数个文本选项以及取消按钮（可选）的菜单，每一个选项都可以绑定到一个函数，将会在选项被点击时运行对应的函数。本控件可被用于右键菜单、下拉菜单等位置。
+
+取消按钮是一个可选的菜单项目，如果显示，则会被排列在菜单的末尾。默认情况下，取消按钮会显示为白底，标有深红色“取消”字样的按钮，点击此按钮将会在不执行任何操作的情况下隐藏菜单。Menu控件的参数允许您自定义取消按钮的显隐、前景色、选中时的前景色，详见参数列表。
+
+#### 参数
+
+|     名称      |         解释         |   数据类型    |  默认值   |
+| :-----------: | :------------------: | :-----------: | :-------: |
+|    parent     |       父级容器       |  tkinter容器  |           |
+|    content    |         内容         |     json      |           |
+|      pos      |       菜单位置       | tuple / 'cur' |   'cur'   |
+|     width     |       菜单宽度       |      int      |    100    |
+|      bg       |      菜单背景色      |      str      | '#ffffff' |
+|      fg       |      菜单前景色      |      str      | '#000000' |
+|     selbg     |     选中项背景色     |      str      | '#cccccc' |
+|     selfg     |     选中项前景色     |      str      | '#000000' |
+| showcancelbtn |   是否显示取消按钮   |     bool      |   True    |
+|   canceltxt   |     取消按钮文本     |      str      |  '取消'   |
+|   cancelfg    |    取消按钮前景色    |      str      | '#cc0000' |
+|  cancelselfg  | 取消按钮选中时前景色 |      str      | '#cc0000' |
+
+##### 关于content参数
+
+content参数为一个json字典，格式为`{'<项目文本>',<对应函数>}`，您也可以使用lambda，例如`{'<项目文本>',lambda:<对应函数>(<参数a>,<参数b>)}`，这个content参的格式与BtnRow中的content参数相似，故您可以参考[BtnRow中有关content参数的介绍](#详解`content`参数的字典格式)
+
+#### 函数
+
+##### setcolor
+
+此函数允许您为单个按钮设置新的颜色。
+
+| 名称  |   解释   | 数据类型  | 默认值 |
+| :---: | :------: | :-------: | :----: |
+|  btn  |  菜单项  | tk.Button |        |
+| newbg | 新背景色 |    str    |        |
+| newfg | 新前景色 |    str    |        |
+
+##### getpos
+
+本函数用于获取光标坐标，由程序调用，用于处理`'pos'`，您可以直接调用此函数来获取鼠标位置，但我个人不建议这么做。
 
 ## 附加内容
 

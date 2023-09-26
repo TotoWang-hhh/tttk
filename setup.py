@@ -10,7 +10,7 @@ except FileNotFoundError: # 防止安装时文件找不到
 requirements = []
 
 setup(name="tttk",  # 项目名
-      version="1.0.3",       # 版本号
+      version="1.0.4",       # 版本号
       description="tkinter的增强库",  #简介
       long_description=long_description,  # 长简介 这里使用的 readme 内容
       long_description_content_type="text/markdown",

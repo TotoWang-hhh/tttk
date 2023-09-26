@@ -9,6 +9,8 @@ import tkinter as tk
 import tkinter.ttk as ttk
 #没错接下来就是这个更好使的tttk:)
 
+import pyautogui
+
 #数字输入框
 #在输入框的两边分别是“减一”和“加一”的按钮。点击输入框会触发编辑模式，左边按钮会变成空白并被禁用，右边会变成提交按钮，点击提交后，如果输入的内容为数字，则会设定输入框内的值并恢复原状。
 #参数：窗口，默认值（0），最小值（无），最大值（无）
@@ -304,3 +306,65 @@ class BtnRow(tk.Frame):
         for txt in list(self.content.keys()):
             self.btns.append(ttk.Button(self,text=txt,command=self.content[txt]))
             self.btns[list(self.content.keys()).index(txt)].pack(side=tk.LEFT,padx=seperate/2)
+
+#菜单
+#创建一个包含多个文本选项的菜单，多用于右键菜单或下拉菜单。
+#参数：父级，菜单内容，菜单位置，宽度，背景色（'#ffffff'），前景色（'#000000'），选中项背景色（'#cccccc'），
+#     选中项前景色（'#000000'），是否显示取消按钮（True），取消按钮文本（'取消'），取消按钮前景色（'#cc0000'）
+#最初用于/来源：PyVP Client > PyVP Modules > ui
+class Menu(tk.Toplevel):
+    '''
+    是个tttk的好苗子，等到这玩意加进tttk后就有可供参考的内容了
+    唯一需要注意的是，content即菜单内容中不能有文字重复项，否则可能会有bug
+    content的格式与tttk.BtnRow大同小异，可以到tttk文档或readme中查看
+    pos，为相对于屏幕左上角的坐标元组或'cur'表示鼠标位置
+    '''
+    def __init__(self,parent,content,pos='cur',width=100,bg='#ffffff',fg='#000000',selbg='#cccccc',selfg='#000000',
+                 showcancelbtn=True,canceltxt='取消',cancelfg='#cc0000',cancelselfg='#cc0000'):
+        tk.Toplevel.__init__(self)
+        self.title('Menu')
+        self.overrideredirect(True)
+        self.transient(parent)
+        self.wm_attributes('-topmost',True)
+        self.content=content
+        self.pos=pos
+        self.width=width
+        self.btns=[]
+        for i in list(content.keys()):
+            self.btns.append(tk.Button(self,text=i,command=lambda lambda_i=i:self.do(self.content[lambda_i]),bg=bg,fg=fg,bd=0,anchor='w'))
+        for btn in self.btns:
+            btn.pack(fill=tk.X)
+            btn.bind('<Enter>',lambda event,lambda_btn=btn:self.setcolor(lambda_btn,selbg,selfg))
+            btn.bind('<Leave>',lambda event,lambda_btn=btn:self.setcolor(lambda_btn,bg,fg))
+        if showcancelbtn:
+            cancelbtn=tk.Button(self,text=canceltxt,command=self.hide,bg=bg,fg=cancelfg,bd=0,anchor='w')
+            cancelbtn.pack(fill=tk.X)
+            cancelbtn.bind('<Enter>',lambda event,lambda_btn=cancelbtn:self.setcolor(lambda_btn,selbg,cancelselfg))
+            cancelbtn.bind('<Leave>',lambda event,lambda_btn=cancelbtn:self.setcolor(lambda_btn,bg,cancelfg))
+        self.update()
+        self.geometry(str(self.width)+'x'+str(self.winfo_height()))
+        self.withdraw()
+    def setcolor(self,btn,newbg,newfg):
+        btn['bg']=newbg
+        btn['fg']=newfg
+    def getpos(self):
+        if self.pos=='cur':
+            return (pyautogui.position()[0]+10,pyautogui.position()[1]+10)
+        else:
+            return self.pos
+    def show(self):
+        self.deiconify()
+        newx,newy=self.getpos()
+        self.geometry(str(self.width)+'x'+str(self.winfo_height())+'+'+str(newx+10)+'+'+str(newy+10))
+    def _hide(self):
+        self.withdraw()
+    def hide(self):
+        for i in range(0,5):
+            self.wm_attributes('-alpha',1-0.2*i)
+            self.update()
+            time.sleep(0.02)
+        self._hide()
+        self.wm_attributes('-alpha',1)
+    def do(self,func):
+        self.hide()
+        func()
