@@ -64,6 +64,11 @@ btnrowpt.pack(fill=tk.X,padx=15,pady=10)
 
 ##################################################
 
+menu=tttk.Menu(win,content={'百度':lambda:webbrowser.open("https://www.baidu.com"),'示例':func,'打开屏幕键盘':osnk})
+ttk.Button(win,text='单击显示菜单',command=menu.show)
+
+##################################################
+
 tk.Label(win,text='').pack()
 
 win.mainloop()

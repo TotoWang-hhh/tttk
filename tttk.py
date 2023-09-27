@@ -9,7 +9,7 @@ import tkinter as tk
 import tkinter.ttk as ttk
 #没错接下来就是这个更好使的tttk:)
 
-import pyautogui
+import time
 
 #数字输入框
 #在输入框的两边分别是“减一”和“加一”的按钮。点击输入框会触发编辑模式，左边按钮会变成空白并被禁用，右边会变成提交按钮，点击提交后，如果输入的内容为数字，则会设定输入框内的值并恢复原状。
@@ -322,9 +322,10 @@ class Menu(tk.Toplevel):
     def __init__(self,parent,content,pos='cur',width=100,bg='#ffffff',fg='#000000',selbg='#cccccc',selfg='#000000',
                  showcancelbtn=True,canceltxt='取消',cancelfg='#cc0000',cancelselfg='#cc0000'):
         tk.Toplevel.__init__(self)
+        self.parent=parent
         self.title('Menu')
         self.overrideredirect(True)
-        self.transient(parent)
+        self.transient(self.parent)
         self.wm_attributes('-topmost',True)
         self.content=content
         self.pos=pos
@@ -349,7 +350,9 @@ class Menu(tk.Toplevel):
         btn['fg']=newfg
     def getpos(self):
         if self.pos=='cur':
-            return (pyautogui.position()[0]+10,pyautogui.position()[1]+10)
+            posx=self.parent.winfo_x()+self.parent.winfo_pointerx()
+            posy=self.parent.winfo_y()+self.parent.winfo_pointery()
+            return (self.parent.winfo_pointerx(),self.parent.winfo_pointery())
         else:
             return self.pos
     def show(self):
