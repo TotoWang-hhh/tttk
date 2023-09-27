@@ -356,6 +356,8 @@ win.mainloop()
 
 取消按钮是一个可选的菜单项目，如果显示，则会被排列在菜单的末尾。默认情况下，取消按钮会显示为白底，标有深红色“取消”字样的按钮，点击此按钮将会在不执行任何操作的情况下隐藏菜单。Menu控件的参数允许您自定义取消按钮的显隐、前景色、选中时的前景色，详见参数列表。
 
+![TipEnter](https://raw.githubusercontent.com/TotoWang-hhh/tttk/main/docs/img/Menu.png)
+
 #### 参数
 
 |     名称      |         解释         |   数据类型    |  默认值   |
