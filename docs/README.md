@@ -18,6 +18,11 @@ I **can** translate this doc but I'm too lazy. If you want to do it 4 me, please
 
 ### 更新内容
 
+#### 1.0.4
+
+- 轻微修改并加入了Menu菜单控件
+- 修订了文档
+
 #### 1.0.3
 
 - 按照kennethreitz大佬提供的setup.py例子修改了setup.py
@@ -47,10 +52,10 @@ I **can** translate this doc but I'm too lazy. If you want to do it 4 me, please
 
 这个库里的控件十分稀少，如果你需要更多好玩的控件，那么以下是推荐的库：
 
-- tkwebview2，这个库包含1个控件，它可以在tkinter窗口中显示网页，但您需要先安装EdgeWebview2。
-- tkinterie，该库可以显示简单的网页，可以用在如渲染README，显示简单的HTML+CSS撰写的通知、帮助等地方。该库不支持js，调整控件大小较为困难，但稳定性高于tkwebview2。
-- ttkbootstrap，一个控件库，为ttk提供崭新的视觉样式，但在每一版操作系统上都如此，所以在某些系统中会存在违和感。该库兼容性不佳，需要高版本Python。
-- TinUI，一个美观的控件库，风格为仿WinUI，通过该库的主题可实现跟随系统自动深浅色。但是相较于ttkbootstrap，它有些不易用，因为在推荐的三者中，这是唯一一个基于canvas的库。主要作者称这只是业余制作的控件库，所以该库细节效果不佳。
+- tkwebview2，这个库包含1个控件，它可以在tkinter窗口中显示网页，但您需要先安装EdgeWebview2，本库最高仅支持Python 3.8。
+- tkintertools（tkt），新版的tkt可以做到近乎完全对控件进行自定义，同时支持简单的3D图形渲染、2D绘图和MarkDown内容显示。最低支持Python 3.8。
+- ttkbootstrap，一个控件库，为ttk提供崭新的视觉样式，但在每一版操作系统上都如此，所以在某些系统中会存在违和感。最低支持Python 3.8。
+- TinUI，一个美观的控件库，风格为仿WinUI，通过该库的主题可实现跟随系统自动深浅色。但是相较于ttkbootstrap，它有些不易用，因为本库基于canvas故不符合原生tkinter的开发习惯，并且其可定制度不高。主要作者称这只是业余制作的控件库，所以该库细节效果不佳。
 
 ## 取名
 
