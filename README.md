@@ -31,22 +31,27 @@ You can translate this doc with a translate software. **(Do not use Google Trans
 
 不出意外的话，本文的最新版本将始终在[GitHub存储库](https://github.com/totowang-hhh/tttk/)和[基于GitHub Pages和Docsify的在线文档站](https://totowang-hhh.github.io/tttk)可用。
 
-### 更新内容
+## 更新内容
 
-#### 1.0.3
+### 1.0.4
+
+- 轻微修改并加入了Menu菜单控件
+- 修订了文档
+
+### 1.0.3
 
 - 按照kennethreitz大佬提供的setup.py例子修改了setup.py
 - 本次修复顺便将导入代码简化，以后只需`import tttk`即可
 
-#### 1.0.2
+### 1.0.2
 
 - 删除了依赖中的`tkinter`，修复了pip安装时，由于PyPI上没有tkinter的包而找不到依赖`tkinter`，自动下载并尝试安装未修复`setup.py`报错问题的旧版（0.1.1或1.0.1），然后导致安装报错的问题，但实际仍存在其他问题，安装后似乎并没有反应
 
-#### 1.0.1
+### 1.0.1
 
 - 修复了（至少努力修复了）安装时`setup.py`找不到README文件的错误，但事实证明，本版虽然解决了该问题，但并未修复全部问题
 
-#### 1.0.0
+### 1.0.0
 
 ~~多了去了~~
 
