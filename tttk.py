@@ -325,7 +325,7 @@ class Menu(tk.Toplevel):
         self.parent=parent
         self.title('Menu')
         self.overrideredirect(True)
-        self.transient(self.parent)
+        #self.transient(self.parent)
         self.wm_attributes('-topmost',True)
         self.content=content
         self.pos=pos
@@ -371,3 +371,77 @@ class Menu(tk.Toplevel):
     def do(self,func):
         self.hide()
         func()
+
+#悬浮提示
+#创建一个包含一行文本的悬浮提示，一般用于功能提示、全文显示等。
+#参数：父级，提示内容
+#最初用于/来源：PyVP Server > ui
+class ToolTip(object):
+    def __init__(self, widget, text):
+        self.widget = widget
+        self.tipwindow = None
+        self.id = None
+        self.x = self.y = 0
+        self.text=text
+        widget.bind('<Enter>', self.enter)
+        widget.bind('<Leave>', self.leave)
+    def enter(self,event):
+        self.showtip(self.text)
+    def leave(self,event):
+        self.hidetip()
+    #当光标移动指定控件是显示消息
+    def showtip(self, text):
+        "Display text in tooltip window"
+        self.text = text
+        if self.tipwindow or not self.text:
+            return
+        x, y, cx, cy = self.widget.bbox("insert")
+        x = x + self.widget.winfo_rootx()+30
+        y = y + cy + self.widget.winfo_rooty()+30
+        self.tipwindow = tw = tk.Toplevel(self.widget)
+        tw.wm_overrideredirect(1)
+        tw.wm_geometry("+%d+%d" % (x, y))
+        label = tk.Label(tw, text=self.text,justify=tk.LEFT,
+                      background="white", relief=tk.SOLID, borderwidth=1,
+                      font=("微软雅黑", "10"))
+        label.pack(side=tk.BOTTOM)
+    #当光标移开时提示消息隐藏
+    def hidetip(self):
+        tw = self.tipwindow
+        self.tipwindow = None
+        if tw:
+            tw.destroy()
+
+#悬浮展示框
+#创建一个可包含任何内容的悬浮提示，一般用于功能提示、图文预览、少量信息弹窗展示等。
+#参数：悬浮触发/所属控件，是否悬浮显示（False）
+#最初用于/来源：tttk
+class Flyout(tk.Toplevel):
+    def __init__(self,widget,showwhenenter=False):
+        self.widget = widget
+        tk.Toplevel.__init__(self)
+        self.configure(background='#ffffff')
+        self.withdraw()
+        self.tipwindow = None
+        self.id = None
+        self.x = self.y = 0
+        if showwhenenter:
+            widget.bind('<Enter>', self.enter)
+            widget.bind('<Leave>', self.leave)
+    def enter(self,event):
+        self.showtip()
+    def leave(self,event):
+        self.hidetip()
+    #当光标移动指定控件是显示消息
+    def showtip(self):
+        x, y, cx, cy = self.widget.bbox("insert")
+        x = x + self.widget.winfo_rootx()+30
+        y = y + cy + self.widget.winfo_rooty()+30
+        tw=self
+        tw.wm_overrideredirect(1)
+        tw.wm_geometry("+%d+%d" % (x, y))
+        tw.deiconify()
+    #当光标移开时提示消息隐藏
+    def hidetip(self):
+        tw = self
+        self.withdraw()
