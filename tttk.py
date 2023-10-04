@@ -314,6 +314,7 @@ class BtnRow(tk.Frame):
 #最初用于/来源：PyVP Client > PyVP Modules > ui
 class Menu(tk.Toplevel):
     '''
+    原注释：
     是个tttk的好苗子，等到这玩意加进tttk后就有可供参考的内容了
     唯一需要注意的是，content即菜单内容中不能有文字重复项，否则可能会有bug
     content的格式与tttk.BtnRow大同小异，可以到tttk文档或readme中查看
@@ -420,7 +421,7 @@ class Flyout(tk.Toplevel):
     def __init__(self,widget,showwhenenter=False):
         self.widget = widget
         tk.Toplevel.__init__(self)
-        self.configure(background='#ffffff')
+        self.configure(background='#eeeeee')
         self.withdraw()
         self.tipwindow = None
         self.id = None

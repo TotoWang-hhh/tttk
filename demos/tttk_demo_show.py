@@ -4,6 +4,7 @@ import tkinter.ttk as ttk
 import tttk
 
 import webbrowser
+import os
 
 root=tk.Tk()
 root.title('tttk Demo')
@@ -92,7 +93,7 @@ tk.Label(winb,text='').pack() #空白分隔
 
 menupt=ttk.Labelframe(winb,text='Menu')
 
-menu=tttk.Menu(winb,content={'百度':lambda:webbrowser.open("https://www.baidu.com"),'示例':func,'打开屏幕键盘':osnk})
+menu=tttk.Menu(winb,content={'百度':lambda:webbrowser.open("https://www.baidu.com"),'示例':func,'打开系统屏幕键盘':lambda:os.system('start osk')})
 ttk.Button(menupt,text='单击显示菜单',command=menu.show).pack(padx=15,pady=10)
 
 menupt.pack(fill=tk.X,padx=15,pady=10)
@@ -106,8 +107,9 @@ flyoutbtn=ttk.Button(flyoutpt,text='单击显示悬浮展示框')
 flyoutbtn.pack(padx=15,pady=10)
 
 flyout=tttk.Flyout(flyoutbtn)
-tk.Label(flyout,text='此为悬浮展示框内容',fg='#0000ff').pack(padx=15,pady=10)
-ttk.Button(flyout,text='关闭',command=flyout.hidetip).pack(padx=25,pady=10)
+tk.Label(flyout,text='此为悬浮展示框内容',fg='#0000ff',bg='#eeeeee',justify='left').pack(padx=15,pady=10,anchor='w')
+tk.Label(flyout,text='Flyout继承自Toplevel，\n所以您可以在此放置任何内容',fg='#ff0000',bg='#eeeeee',justify='left').pack(padx=15,pady=10,anchor='w')
+ttk.Button(flyout,text='关闭',command=flyout.hidetip).pack(padx=25,pady=10,anchor='w')
 
 flyoutbtn['command']=flyout.showtip
 
