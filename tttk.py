@@ -429,9 +429,9 @@ class Flyout(tk.Toplevel):
         if showwhenenter:
             widget.bind('<Enter>', self.enter)
             widget.bind('<Leave>', self.leave)
-    def enter(self,event):
+    def enter(self,xx_event):
         self.showtip()
-    def leave(self,event):
+    def leave(self,xx_event):
         self.hidetip()
     #当光标移动指定控件是显示消息
     def showtip(self):
