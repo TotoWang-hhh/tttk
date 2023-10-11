@@ -17,15 +17,15 @@ tttk是一个tkinter的增强库，旨在扩展tkinter可使用的控件。**注
 
 这些控件并非为此所制作，而是整理于我过去开发的程序，这些程序中的一部分中会有这种可移植的有趣玩意。
 
-## For English Speakers
+## Need English?
 
-I'm now translating this document after I saw a foreigner in stargazers list...
+Creat an issue to tell me about this. Then I will continue translating the document.
 
-### If I Haven't Done Yet
+## 效果展示
 
-You can translate this doc with a translate software. **(Do not use Google Translate to Translate Chinese into English, because Google Translate is famous for its RUBBISH TRANSLATION in China)**
+本库的demo提供了完整的效果展示，详见文档内的Demo部分，下面的截图则是此demo，较为全面地展示了效果。
 
-~~I **can** translate this doc but I'm too lazy. If you want to do it 4 me, please contact me at tt1224@hotmail.com.~~
+![Demo截图/效果展示](https://raw.githubusercontent.com/TotoWang-hhh/tttk/main/docs/img/demo.png)
 
 ## 不清楚文档是否为最新？
 

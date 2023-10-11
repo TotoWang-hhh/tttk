@@ -8,11 +8,9 @@ tttk是一个tkinter的增强库，旨在扩展tkinter可使用的控件。**注
 
 这些控件并非为此所制作，而是整理于我过去开发的程序，这些程序中的一部分中会有这种可移植的有趣玩意。
 
-## For English Speakers
+## Need English?
 
-U can translate this doc with a translate software. **(Do not use Google Translate to Translate Chinese into English, because Google Translate is famous 4 its RUBBISH TRANSLATION in China)**
-
-I **can** translate this doc but I'm too lazy. If you want to do it 4 me, please contact me at tt1224@hotmail.com.
+Creat an issue to tell me about this. Then I will continue translating the document.
 
 ## 对应版本：1.0.0~1.0.4
 
@@ -81,7 +79,7 @@ numenter.frame.pack()
 win.mainloop()
 ```
 
-![效果](https://raw.githubusercontent.com/TotoWang-hhh/tttk/main/docs/img/custom.png)
+![定制效果](https://raw.githubusercontent.com/TotoWang-hhh/tttk/main/docs/img/custom.png)
 
 ## Demo
 
@@ -89,7 +87,7 @@ win.mainloop()
 
 目前仍然保持更新并能够展示所有tttk内容的demo是纯展示demo，您可以直接运行来查看tttk中包含的所有控件。纯展示demo会传入尽可能少的参数，向您展示tttk控件的默认样式。
 
-
+![Demo截图](https://raw.githubusercontent.com/TotoWang-hhh/tttk/main/docs/img/demo.png)
 
 > 烫知识：作者会通过demo来测试tttk，并且使用demo制作文档内各个控件的截图。
 
@@ -359,7 +357,7 @@ win.mainloop()
 
 取消按钮是一个可选的菜单项目，如果显示，则会被排列在菜单的末尾。默认情况下，取消按钮会显示为白底，标有深红色“取消”字样的按钮，点击此按钮将会在不执行任何操作的情况下隐藏菜单。Menu控件的参数允许您自定义取消按钮的显隐、前景色、选中时的前景色，详见参数列表。
 
-![TipEnter](https://raw.githubusercontent.com/TotoWang-hhh/tttk/main/docs/img/Menu.png)
+![Menu](https://raw.githubusercontent.com/TotoWang-hhh/tttk/main/docs/img/Menu.png)
 
 #### 参数
 
@@ -424,6 +422,8 @@ pos参数的内容应为一个元组或者`'cur'`，若传入元组，则格式�
 
 悬浮提示，在光标悬浮于父级控件之上时，显示一行文本提示。
 
+![ToolTip](https://raw.githubusercontent.com/TotoWang-hhh/tttk/main/docs/img/ToolTip.png)
+
 #### 参数
 
 |  名称  |     解释     | 数据类型 | 默认值 |
@@ -462,6 +462,8 @@ pos参数的内容应为一个元组或者`'cur'`，若传入元组，则格式�
 此类继承于tk.Toplevel，您可以在其之内放置任何tkinter或其辅助模块的控件。
 
 当前悬浮展示框的代码还不完善，您可以自行继承此类进行动画、尺寸、出现位置等定制。
+
+![Flyout](https://raw.githubusercontent.com/TotoWang-hhh/tttk/main/docs/img/Flyout.png)
 
 #### 参数
 
