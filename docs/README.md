@@ -19,7 +19,12 @@ Creat an issue to tell me about this. Then I will continue translating the docum
 #### 1.0.4
 
 - 轻微修改并加入了Menu菜单控件
+- 加入了ToolTip控件
+- 加入了Flyout控件
+- 删除了repo中冗余文件
+- 举例Demo从该版本停止更新
 - 修订了文档
+- 在repo中使用GitHub Action发布PyPI包
 
 #### 1.0.3
 
