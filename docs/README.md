@@ -10,7 +10,7 @@ tttk是一个tkinter的增强库，旨在扩展tkinter可使用的控件。**注
 
 ## Need English?
 
-Creat an issue to tell me about this. Then I will continue translating the document.
+Create an issue to tell me about this. Then I will continue translating the document.
 
 ## 对应版本：1.0.0~1.0.4
 

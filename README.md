@@ -19,7 +19,7 @@ tttk是一个tkinter的增强库，旨在扩展tkinter可使用的控件。**注
 
 ## Need English?
 
-Creat an issue to tell me about this. Then I will continue translating the document.
+Create an issue to tell me about this. Then I will continue translating the document.
 
 ## 效果展示
 
@@ -30,36 +30,3 @@ Creat an issue to tell me about this. Then I will continue translating the docum
 ## 不清楚文档是否为最新？
 
 不出意外的话，本文的最新版本将始终在[GitHub存储库](https://github.com/totowang-hhh/tttk/)和[基于GitHub Pages和Docsify的在线文档站](https://totowang-hhh.github.io/tttk)可用。
-
-## 更新内容
-
-### 1.0.4
-
-- 轻微修改并加入了Menu菜单控件
-- 修订了文档
-
-### 1.0.3
-
-- 按照kennethreitz大佬提供的setup.py例子修改了setup.py
-- 本次修复顺便将导入代码简化，以后只需`import tttk`即可
-
-### 1.0.2
-
-- 删除了依赖中的`tkinter`，修复了pip安装时，由于PyPI上没有tkinter的包而找不到依赖`tkinter`，自动下载并尝试安装未修复`setup.py`报错问题的旧版（0.1.1或1.0.1），然后导致安装报错的问题，但实际仍存在其他问题，安装后似乎并没有反应
-
-### 1.0.1
-
-- 修复了（至少努力修复了）安装时`setup.py`找不到README文件的错误，但事实证明，本版虽然解决了该问题，但并未修复全部问题
-
-### 1.0.0
-
-~~多了去了~~
-
-- 除弹窗类外的所有控件都继承自tkinter原生控件，现在是，将来也是。故以后可以直接调用控件的放置函数
-- 新增了TipEnter、BtnRow两个新控件。
-- 修改代码注释，进一步统一格式
-- 文档更新（必须的！）
-- 修复了NumEnter和NumEnterOld指定并达到了最小值后，不会禁用`-`按钮的问题
-- 新增了最小值、最大值的检测，若指定的值存在潜在问题，则判定为不可接受，此时将会禁用该组件
-- 修改Demo，并分化为两个
-
