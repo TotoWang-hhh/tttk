@@ -22,7 +22,8 @@ Creat an issue to tell me about this. Then I will continue translating the docum
 - 加入了ToolTip控件
 - 加入了Flyout控件
 - 删除了repo中冗余文件
-- 举例Demo从该版本停止更新
+- Demo使用分页布局
+- 举例Demo从该版本起停止更新
 - 修订了文档
 - 在repo中使用GitHub Action发布PyPI包
 
