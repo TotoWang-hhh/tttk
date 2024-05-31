@@ -452,7 +452,7 @@ class Flyout(tk.Toplevel):
 #参数：父级，文本（None），图像（None），背景（'#0078dc'），前景（'#ffffff'），鼠标悬浮时背景（'darker'），鼠标悬浮时前景（'nochange'），禁用时前景（'lighter'），点击时执行（None）
 #最初用于/来源：PyVP Client > PyVP Modules > ui
 class FlatButton(tk.Label):
-    def __init__(self,parent,text=None,image=None,bg='#0078dc',fg='#ffffff',floatingbg='darker',floatingfg='nochange',disablefg='lighter',command=None):
+    def __init__(self,parent,text=None,image=None,bg='#0078dc',fg='#ffffff',floatingbg='darker',floatingfg='nochange',disablefg='lighter',command=None,font=None):
         if image==None:
             tk.Label.__init__(self,parent,text=text,bg=bg,fg=fg)
         else:
@@ -462,6 +462,8 @@ class FlatButton(tk.Label):
         self.image=image
         self.bg=bg
         self.fg=fg
+        if font!=None:
+            self["font"]=font
         if floatingbg.lower()=='darker':
             self.floatingbg=self.calc_color(self.bg,'darker',level=1)
         elif floatingbg.lower()=='nochange':
