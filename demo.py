@@ -126,7 +126,27 @@ tttk.ToolTip(tiplabel,'此为悬浮提示的提示内容')
 
 tooltippt.pack(fill=tk.X,padx=15,pady=10)
 
-tk.Label(winb,text='').pack() #空白分隔
 ##################################################
+
+flatbtn_based_pt=ttk.Labelframe(winb,text="FlatButton & AnimatedButton")
+
+flatbtn = tttk.FlatButton(flatbtn_based_pt, text='FlatButton', command=lambda: msgbox.showinfo(
+    'Message', 'You clicked the button'))
+flatbtn.pack(padx=25, pady=10)
+
+disabled_flatbtn = tttk.FlatButton(flatbtn_based_pt, text='disabled FlatButton', bg='#cccccc', fg='#000000', floatingbg='#000000', floatingfg='#ffffff',
+                            command=lambda: msgbox.showinfo('Message', 'You clicked the button'))
+disabled_flatbtn.pack(padx=25, pady=10)
+disabled_flatbtn.disable()
+
+anmbtn = tttk.AnimatedButton(flatbtn_based_pt, win, text='AnimatedButton', bg='#cccccc', fg='#000000', floatingbg='#000000', floatingfg='#ffffff',
+                           command=lambda: msgbox.showinfo('Message', 'You clicked the button'))
+anmbtn.pack(padx=25, pady=10)
+
+flatbtn_based_pt.pack(fill=tk.X,padx=15,pady=10)
+
+##################################################
+
+tk.Label(winb,text='').pack() #空白分隔
 
 tk.mainloop()

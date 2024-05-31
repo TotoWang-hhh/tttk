@@ -19,7 +19,7 @@ tttk是一个tkinter的增强库，旨在扩展tkinter可使用的控件。**注
 
 ## Need English?
 
-Create an issue to tell me about this. Then I will continue translating the document.
+Create an issue to tell me about this. Then I will start translating the document and this README file.
 
 ## 效果展示
 
@@ -27,6 +27,6 @@ Create an issue to tell me about this. Then I will continue translating the docu
 
 ![Demo截图/效果展示](https://raw.githubusercontent.com/TotoWang-hhh/tttk/main/docs/img/demo.png)
 
-## 不清楚文档是否为最新？
+## 查阅文档
 
-不出意外的话，本文的最新版本将始终在[GitHub存储库](https://github.com/totowang-hhh/tttk/)和[基于GitHub Pages和Docsify的在线文档站](https://totowang-hhh.github.io/tttk)可用。
+文档的最新版本将始终在[GitHub存储库](https://github.com/totowang-hhh/tttk/)和[基于GitHub Pages和Docsify的在线文档站](https://totowang-hhh.github.io/tttk)可用。您也可以从GitHub下载文档供线下查阅。
