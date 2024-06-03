@@ -452,18 +452,18 @@ class Flyout(tk.Toplevel):
 #参数：父级，文本（None），图像（None），背景（'#0078dc'），前景（'#ffffff'），鼠标悬浮时背景（'darker'），鼠标悬浮时前景（'nochange'），禁用时前景（'lighter'），点击时执行（None）
 #最初用于/来源：PyVP Client > PyVP Modules > ui
 class FlatButton(tk.Label):
-    def __init__(self,parent,text=None,image=None,bg='#0078dc',fg='#ffffff',floatingbg='darker',floatingfg='nochange',disablefg='lighter',command=None,font=None):
+    def __init__(self,parent,text=None,image=None,bg='#0078dc',fg='#ffffff',floatingbg='darker',floatingfg='nochange',disablefg='lighter',command=None,**kwargs):
         if image==None:
-            tk.Label.__init__(self,parent,text=text,bg=bg,fg=fg)
+            tk.Label.__init__(self,parent,text=text,bg=bg,fg=fg,**kwargs)
         else:
-            tk.Label.__init__(self,parent,image=image,bg=bg,fg=fg)
+            tk.Label.__init__(self,parent,image=image,bg=bg,fg=fg,**kwargs)
         self.parent=parent
         self.text=text
         self.image=image
         self.bg=bg
         self.fg=fg
-        if font!=None:
-            self["font"]=font
+        #if font!=None:
+        #    self["font"]=font
         if floatingbg.lower()=='darker':
             self.floatingbg=self.calc_color(self.bg,'darker',level=1)
         elif floatingbg.lower()=='nochange':
@@ -485,7 +485,7 @@ class FlatButton(tk.Label):
         self.command=command
         self.bind('<Enter>',self.mouse_enter)
         self.bind('<Leave>',self.mouse_leave)
-        self.bind('<Button-1>',self.mouse_click)
+        self.bind('<ButtonRelease-1>',self.mouse_click)
     def calc_color(self,color:str,change_type:str='darker',level:int=1): #将传入的颜色变深/变浅，用于处理颜色参数中传入的'lighter'/'darker'
         if level==0: #level参数为0代表不处理
             return color

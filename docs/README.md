@@ -520,6 +520,8 @@ FlatButton是一个继承自tkinter.Label伪按钮控件，旨在为Button提供
 | disablefg  |   禁用时前景色   |        str         | "lighter"  |
 |  command   |    点击时执行    | function / lambda  |    None    |
 
+**注：**其他任何参数将被原封不动作为Label的参数
+
 #### 函数
 
 ##### calc_color
